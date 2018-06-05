@@ -5,20 +5,35 @@ import os
 print(os.environ, file=sys.stderr)
 outargs = []
 outargs.append("/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld")
-outargs.append("-dylib")
 i = 1
 while i < len(sys.argv):
 	a = sys.argv[i]
 	b = a
 	if a == "-ios_simulator_version_min":
-		b = "-iosmac_version_min"
+		#b = "-iosmac_version_min"
+		outargs.append("-macosx_version_min")
+		outargs.append("10.14")
+		i += 2
+		continue
+	if a == "-syslibroot" and True:
+		i += 2
+		continue
 	outargs.append(b)
 	i += 1
+#outargs.append("-rpath")
+#outargs.append("/System/iOSSupport/usr/lib")
+#outargs.append("-rpath")
+#outargs.append("/System/iOSSupport/System/Library/Frameworks")
+#outargs.append("-rpath")
+#outargs.append("/System/iOSSupport/System/Library/PrivateFrameworks")
 outargs.append("-rpath")
-outargs.append("/System/iOSSupport/usr/lib")
-outargs.append("-rpath")
-outargs.append("/System/iOSSupport/System/Library/Frameworks")
-outargs.append("-rpath")
-outargs.append("/System/iOSSupport/System/Library/PrivateFrameworks")
+outargs.append("/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx")
+outargs.append("-Z")
+outargs += ["-F/System/iOSSupport/System/Library/Frameworks"]
+outargs += ["-F/System/iOSSupport/System/Library/PrivateFrameworks"]
+outargs += ["-F/System/Library/Frameworks"]
+outargs += ["-F/System/Library/PrivateFrameworks"]
+outargs += ["-L/System/iOSSupport/usr/lib"]
+outargs += ["-L/usr/lib"]
 print(outargs, file=sys.stderr)
 os.execv(outargs[0], outargs)
