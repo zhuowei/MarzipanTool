@@ -1,4 +1,4 @@
-breakpoint set -[FBProcess hasEntitlement:]
+breakpoint set -F "-[FBProcess hasEntitlement:]"
 breakpoint command add
 thread return 1
 continue
