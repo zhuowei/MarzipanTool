@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+from __future__ import print_function
+import sys
+import os
+print(os.environ, file=sys.stderr)
+outargs = []
+outargs.append("/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld")
+outargs.append("-dylib")
+i = 1
+while i < len(sys.argv):
+	a = sys.argv[i]
+	b = a
+	if a == "-ios_simulator_version_min":
+		b = "-iosmac_version_min"
+	outargs.append(b)
+	i += 1
+outargs.append("-rpath")
+outargs.append("/System/iOSSupport/usr/lib")
+outargs.append("-rpath")
+outargs.append("/System/iOSSupport/System/Library/Frameworks")
+outargs.append("-rpath")
+outargs.append("/System/iOSSupport/System/Library/PrivateFrameworks")
+print(outargs, file=sys.stderr)
+os.execv(outargs[0], outargs)

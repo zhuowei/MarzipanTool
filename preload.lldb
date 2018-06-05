@@ -1,0 +1,21 @@
+breakpoint set -F csops -s dyld
+breakpoint command add 1
+    thread return -1
+    breakpoint disable 1
+    continue
+DONE
+
+breakpoint set -F main -s preloader
+breakpoint command add --script-type python 2
+    res = lldb.SBCommandReturnObject()
+    lldb.debugger.GetCommandInterpreter().HandleCommand("target modules lookup -s RedirectorMain -v", res)
+    ostr = res.GetOutput()
+    beginRange = "range = ["
+    beginInd = ostr.find(beginRange)+len(beginRange)
+    rangeStr = ostr[beginInd:ostr.find("-", beginInd)]
+    res = lldb.SBCommandReturnObject()
+    lldb.debugger.GetCommandInterpreter().HandleCommand("register write pc " + rangeStr, res)
+    return False
+DONE
+process launch -v DYLD_INSERT_LIBRARIES=/Users/zhuowei/Documents/winprogress/marzipan/preload/libiosmac_preload.dylib -s
+continue
