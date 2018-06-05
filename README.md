@@ -11,3 +11,11 @@ In another terminal
 ```
 sudo ./uikitenabler.sh
 ```
+
+In yet another terminal:
+
+```
+./uikitsystemenabler.sh
+```
+
+Now launching iOSMac apps brings up the icon, but applicationDidLaunch is never called on the delegate. Sigh.
