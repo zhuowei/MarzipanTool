@@ -10,7 +10,10 @@ while i < len(sys.argv):
 	a = sys.argv[i]
 	b = a
 	if a == "-ios_simulator_version_min":
-		b = "-iosmac_version_min"
+		outargs.append("-iosmac_version_min")
+		outargs.append("12.0")
+		i += 2
+		continue
 	if a == "-syslibroot" and True:
 		i += 2
 		continue
@@ -23,7 +26,7 @@ while i < len(sys.argv):
 #outargs.append("-rpath")
 #outargs.append("/System/iOSSupport/System/Library/PrivateFrameworks")
 outargs.append("-rpath")
-outargs.append("/opt/marzipantool/swiftstdlib")
+outargs.append("/usr/local/share/marzipantool/swiftstdlib")
 outargs.append("-Z")
 outargs += ["-F/System/iOSSupport/System/Library/Frameworks"]
 outargs += ["-F/System/iOSSupport/System/Library/PrivateFrameworks"]

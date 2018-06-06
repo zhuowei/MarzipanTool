@@ -3,7 +3,9 @@ Not ready.
 Do once:
 
 - disable SIP
-- sudo ./installtool.sh
+- Install the Marzipan build script and Swift Stdlibs:
+- make sure /usr/local/share is writable by you. (if you installed Homebrew, it should be.)
+- ./installtool.sh
 
 Porting a project:
 

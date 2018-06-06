@@ -1,10 +1,11 @@
 #!/bin/bash
 # installs global copy of modified Swift stdlibs and ldwrap
 set -e
-echo "Installing to /opt/marzipantool"
+installpath="/usr/local/share/marzipantool"
+echo "Installing to $installpath"
 ./relinkswiftstdlib.sh
-mkdir -p /opt/marzipantool
-rm -r /opt/marzipantool/swiftstdlib || true
-mv swiftstdlib /opt/marzipantool/
-cp ldwrap /opt/marzipantool/ldwrap
+mkdir -p "$installpath"
+rm -r "$installpath/swiftstdlib" || true
+mv swiftstdlib "$installpath/"
+cp ldwrap "$installpath/ldwrap"
 echo "Installed."
