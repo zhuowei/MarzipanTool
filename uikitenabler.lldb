@@ -2,7 +2,8 @@ breakpoint set -r "@objc UIKitHostApp.UHAService.authenticateConnection"
 breakpoint command add
 thread return 1
 process detach
-script import ctypes
-script ctypes.CDLL("libSystem.dylib").exit(0)
+script import os
+script os._exit(0)
 DONE
+script import lldbquitonexit
 c
