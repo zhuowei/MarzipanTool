@@ -1,6 +1,9 @@
 Not ready.
 
+Do once:
+
 - disable SIP
+- sudo ./installtool.sh
 
 Porting a project:
 

@@ -23,7 +23,7 @@ while i < len(sys.argv):
 #outargs.append("-rpath")
 #outargs.append("/System/iOSSupport/System/Library/PrivateFrameworks")
 outargs.append("-rpath")
-outargs.append("/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx")
+outargs.append("/opt/marzipantool/swiftstdlib")
 outargs.append("-Z")
 outargs += ["-F/System/iOSSupport/System/Library/Frameworks"]
 outargs += ["-F/System/iOSSupport/System/Library/PrivateFrameworks"]
