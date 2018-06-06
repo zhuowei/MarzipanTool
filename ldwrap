@@ -10,11 +10,7 @@ while i < len(sys.argv):
 	a = sys.argv[i]
 	b = a
 	if a == "-ios_simulator_version_min":
-		#b = "-iosmac_version_min"
-		outargs.append("-macosx_version_min")
-		outargs.append("10.14")
-		i += 2
-		continue
+		b = "-iosmac_version_min"
 	if a == "-syslibroot" and True:
 		i += 2
 		continue
