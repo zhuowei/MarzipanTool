@@ -1,3 +1,5 @@
+Update: @biscuitehh released [an easier method](https://github.com/biscuitehh/MarzipanPlatter) for enabling/building iOSMac apps: try that method if this tool doesn't work.
+
 Tools to build and run iOS UIKit applications on macOS 10.14 Mojave, using the iOSMac framework announced at WWDC.
 
 ![screenshot of an iOSMac app](https://worthdoingbadly.com/assets/blog/iosmac/sc1.png)
