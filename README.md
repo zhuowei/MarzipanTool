@@ -1,5 +1,13 @@
 Update: @biscuitehh released [an easier method](https://github.com/biscuitehh/MarzipanPlatter) for enabling/building iOSMac apps: try that method if this tool doesn't work.
 
+List of interesting Marzipan/iOSMac repos:
+
+- [biscuitehh/MarzipanPlatter](https://github.com/biscuitehh/MarzipanPlatter) - another (easier) method of launching/building Marzipan apps
+- [justMaku/marzipan_hook](https://github.com/justMaku/marzipan_hook) - another (crazier) way to launch Marzipan apps by injecting into Voice Memos
+- [kirb/iOSMac-Demo](https://github.com/kirb/iOSMac-Demo) - a better tutorial for running Marzipan apps, with a sample app
+- [notjosh/Marzipants](https://github.com/notjosh/Marzipants) - React Native on macOS with Marzipan
+- [Let me know](https://github.com/zhuowei/MarzipanTool/pulls) of any others!
+
 Tools to build and run iOS UIKit applications on macOS 10.14 Mojave, using the iOSMac framework announced at WWDC.
 
 ![screenshot of an iOSMac app](https://worthdoingbadly.com/assets/blog/iosmac/sc1.png)
