@@ -2,6 +2,12 @@
 from __future__ import print_function
 import sys
 
+try:
+	xrange          # Python 2
+except NameError:
+	xrange = range  # Pyhton 3
+
+
 def u32(a, i):
 	return a[i] | (a[i+1] << 8) | (a[i+2] << 16) | (a[i+3] << 32)
 def wu32(a, i, v):
