@@ -113,6 +113,8 @@ If you have any advice on shimming/replacing these classes, please [update this 
 
 `-fuse-ld=/usr/local/share/marzipantool/ldwrap`
 
+This needs to be done for all targets in your project.
+
 ![A screenshot of the configuration page](https://worthdoingbadly.com/assets/blog/iosmac/sc2.png)
 
 **Fix Text Rendering**: Drag the `NSBundle+AppKitCompat.m` file from the MarzipanTool repo (if you're using Objective-C) or the `NSBundle+AppKitCompat.swift` (if Swift) file to your project. Otherwise Storyboard UILabels crash the application.
