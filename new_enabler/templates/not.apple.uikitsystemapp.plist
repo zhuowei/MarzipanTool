@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>not.apple.uikitsystemapp</string>
+	<key>MachServices</key>
+	<dict>
+		<key>NotTheSystemAppPort</key>
+		<dict>
+			<key>ResetAtClose</key>
+			<true/>
+		</dict>
+		<key>not.apple.frontboard.systemappservices</key>
+		<true/>
+		<key>not.apple.frontboard.workspace</key>
+		<true/>
+		<key>not.apple.uikitsystemapp.services</key>
+		<true/>
+        <key>not.apple.uikitsystemapp.daemon-services</key>
+        <true/>
+		<key>not.apple.UIKit.KeyboardManagement.hosted</key>
+		<true/>
+		<key>not.apple.UIKit.statusbarserver</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>MARZIPANTOOLPATH/output/UIKitSystem.app/Contents/MacOS/UIKitSystem</string>
+		<string>system_app_start</string>
+	</array>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>POSIXSpawnType</key>
+	<string>App</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>com.apple.frontboard.systemappservices</key>
+		<string>not.apple.frontboard.systemappservices</string>
+		<key>com.apple.frontboard.workspace</key>
+		<string>not.apple.frontboard.workspace</string>
+	</dict>
+</dict>
+</plist>
