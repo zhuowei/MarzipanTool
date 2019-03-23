@@ -2,7 +2,7 @@
 set -e
 rm -r swiftstdlib || true
 mkdir swiftstdlib
-for i in /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/*.dylib
+for i in /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/*.dylib
 do
 	echo $i
 	localname="swiftstdlib/$(basename "$i")"
