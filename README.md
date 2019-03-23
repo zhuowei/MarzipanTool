@@ -16,7 +16,7 @@ Usage instructions:
 
 ## Initial Setup - Only has to be done once
 
-You will need a Mac running macOS 10.14 Beta, with Xcode 10 Beta installed. (It must be a physical Mac: virtual machines cannot show iOSMac applications, which require GPU acceleration.).
+You will need a Mac running macOS 10.14, with Xcode 10 installed. (It must be a physical Mac: virtual machines cannot show iOSMac applications, which require GPU acceleration.).
 
 ### Disable SIP
 
@@ -26,9 +26,9 @@ Note that disabling System Integrity Protection makes your Mac **insecure**, but
 
 ### Select Xcode
 
-Make sure Xcode Beta is selected as the active Xcode.
+Make sure Xcode is selected as the active Xcode.
 ```
-sudo xcode-select --switch /Applications/Xcode-beta.app
+sudo xcode-select --switch /Applications/Xcode.app
 ```
 
 ### Download and Install MarzipanTool
